@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>App Wallz</title>
+  <link rel="stylesheet" type="text/css" href="LeColor.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+    .texty{
+     
+   /*   padding: 2em 1em 2em 0;*/
+         background-image: url('backg3.png');
+         background-repeat: no-repeat;
+         background-size: 90em;
+         color:black;
+          height: 40em;
+          margin-bottom: 1em;
+          margin-top: 1em;
+       }
+
+    .button {
+  background-color:#33adff;
+  border: none;
+  color: white;
+  font-size: 18px; 
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.button:hover {
+  background-color:#53ff1a;
+}   
+
+  </style>
+</head>
+
+<body>
+<!-----------------SIDENAVBAR------------------>
+<div id="mySidenav" class="sidenav">
+  <a href="#" id="Android">Android</a>
+  <a href="#" id="iOS">iOS</a>
+  <a href="#" id="Windows">Windows</a>
+  <a href="#" id="Linux">Linux</a>
+</div>
+
+
+
+
+<!----------------------------------NAVBAR------------------------>
+	<header>
+       <img src="logo.png" class="logo" width="70px" height="54px" />
+		<nav class="navbar">
+				<a href="#" class="active">Home</a>
+				<a href="#">Sign Up</a>
+				<a href="#">Login</a>
+				<a href="#">Categories</a>
+        <a href="#">About Us</a>
+        <a href="#" class="not1"><img src="facebook3.png"></a>
+         <a href="#" class="not2"><img src="gmail3.png"></a>
+          <a href="#" class="not3"><img src="telegram3.png"></a>
+           <a href="#" class="not4"><img src="whatsapp3.png"></a>
+		</nav>
+  </header>
+
+<!--IMAGE----TEXT-->
+    <div class="texty">
+      <h1><u>MY SW.APPS</u></h1>  
+      <h5>DESIGNED BY CALVIN RODRIGUES</h5>    
+    </div>
+<!--H TAG WITH TEXT-->
+<h3>SLIDESHOW</h3>
+
+
+
+<!--------------------------SLIDESHOW--------------------------------------->
+<div class="sscont">
+<div class="mySlides fade">
+  <img src="wallxap.jpg" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+<div class="mySlides fade">
+  <img src="wallfor.png" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+<div class="mySlides fade">
+  <img src="wallmob.jpg" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<!-----------------------SLIDESHOW SCRIPT----------------------------->
+<br>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!------------H TAG WITH TEXT-------------->
+<h3>WALLZ SECTION</h3>
+
+
+
+<!---------------GO TO TOP BUTTON-------------->
+ <button onclick="topFunction()" id="KACHANG" title="Go to top"><img src="top.png" style="border-radius: 50%; height:4em; width:4em;"></button> 
+<script type="text/javascript">
+
+//Get the button:
+mybutton = document.getElementById("KACHANG");
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}   
+</script> 
+<!----------------------SECTION IMAGE----------------->
+ <div class="container">
+            <div class="gallery">
+                <figure class="gallery__item gallery__item--1">
+                    <img src="1.jpg" alt="Gallery image 1" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--2">
+                    <img src="2.jpg" alt="Gallery image 2" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--3">
+                    <img src="3.jpg" alt="Gallery image 3" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--4">
+                    <img src="4.jpg" alt="Gallery image 4" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--5">
+                    <img src="5.jpg" alt="Gallery image 5" class="gallery__img">
+                </figure>
+                <figure class="gallery__item gallery__item--6">
+                    <img src="6.png" alt="Gallery image 6" class="gallery__img">
+                </figure>
+            </div>
+        </div>
+<!----------------------SECTION IMAGE----------------->
+
+
+<!----------------FOOTER----------------------->
+<div class="dummy_page">
+  LET'S STAY IN TOUCH
+<button class="button">Get Started</button>
+</div>
+<!-- FOOTER START -->
+<div class="footer">
+  <div class="contain">
+  <div class="col">
+    <h1>Company</h1>
+    <ul>
+      <li>About</li>
+      <li>Mission</li>
+      <li>Services</li>
+      <li>Social</li>
+      <li>Get in touch</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Accounts</h1>
+    <ul>
+      <li>About</li>
+      <li>Mission</li>
+      <li>Services</li>
+      <li>Social</li>
+      <li>Get in touch</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Resources</h1>
+    <ul>
+      <li>Webmail</li>
+      <li>Redeem code</li>
+      <li>WHOIS lookup</li>
+      <li>Site map</li>
+      <li>Web templates</li>
+      <li>Email templates</li>
+    </ul>
+  </div>
+  <div class="col">
+    <h1>Support</h1>
+    <ul>
+      <li>Contact us</li>
+      <li>Web chat</li>
+      <li>Open ticket</li>
+    </ul>
+  </div>
+  <div class="col social">
+    <h1>Social</h1>
+    <ul>
+      <li><img src="facebook.png" width="32" style="width: 32px;"></li>
+      <li><img src="youtube.png" width="32" style="width: 32px;"></li>
+      <li><img src="reddit.png" width="32" style="width: 32px;"></li>
+      <li><img src="whatsapp.png" width="32" style="width: 32px;"></li>
+      <li><img src="pinterest.png" width="32" style="width: 32px;"></li>
+      <li><img src="discord.png" width="32" style="width: 32px;"></li>
+      <li><img src="telegram.png" width="32" style="width: 32px;"></li>
+      <li><img src="github.png" width="32" style="width: 32px;"></li>
+      <li><img src="insta.png" width="32" style="width: 32px;"></li>
+    </ul>
+  </div>
+<div class="clearfix"></div>
+</div>
+</div>
+
+
+</body>
+</html>
